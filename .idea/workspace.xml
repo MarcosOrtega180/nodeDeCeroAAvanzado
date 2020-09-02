@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf22825a-9aed-4b15-9531-0913206cf538" name="Default Changelist" comment="" />
+    <list default="true" id="cf22825a-9aed-4b15-9531-0913206cf538" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/app-node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/multiplicar/multiplicar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-bases-node/tabla-9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-fundamentos/async-await2.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-fundamentos/async-await2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-fundamentos/promesas.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-fundamentos/promesas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +53,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gumjpfU5ie00unqavalYku88dF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,17 +88,36 @@
       <workItem from="1598972990716" duration="2682000" />
       <workItem from="1598982622930" duration="2003000" />
       <workItem from="1598985482843" duration="8326000" />
-      <workItem from="1599048233595" duration="11998000" />
+      <workItem from="1599048233595" duration="21482000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1598994574995">
+    <state x="580" y="297" width="516" height="207" key="Github.ShareDialog" timestamp="1599060382320">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1598994574995" />
+    <state x="580" y="297" width="516" height="207" key="Github.ShareDialog/72.27.1294.741@72.27.1294.741" timestamp="1599060382320" />
+    <state x="482" y="77" width="464" height="647" key="Github.UntrackedFilesDialog" timestamp="1599060393852">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="482" y="77" width="464" height="647" key="Github.UntrackedFilesDialog/72.27.1294.741@72.27.1294.741" timestamp="1599060393852" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1599069230615">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1599069230615" />
   </component>
 </project>
