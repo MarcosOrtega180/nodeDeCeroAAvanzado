@@ -19,32 +19,33 @@
 const {crearArchivo, listar} = require('./multiplicar/multiplicar');
 // base = 8;
 
+
 //recibimos el parámetro base desde la consola, en la terminal hay que poner node app-node.js --base12
 
 /* ahora capturamos el argv utilizando yargs para poder configurar de mejor manera lo que el argv retorna
-* además de */
-const argv = require('yargs')
-    .command('listar', 'Imprime la tabla multiplicar', {//esto especifica los argumentos que el argv puede recibir
-        base: {
-            demand: true,
-            alias: 'b'
-        },
-        limite: {
-            alias: 'l',
-            default: 10
-        }
-    }).command('crear', 'Genera un archivo con la tabla de multiplicar', {//esto especifica los argumentos que el argv puede recibir
-        base: {
-            demand: true,
-            alias: 'b'
-        },
-        limite: {
-            alias: 'l',
-            default: 10
-        }
-    })
-    .help()
-    .argv;
+* además de, ahora está en el archivo ./config/yargs.js y ahora exportamos  de la siguiente manera en (3)*/
+// const argv = require('yargs')
+//     .command('listar', 'Imprime la tabla multiplicar', {//esto especifica los argumentos que el argv puede recibir
+//         base: {
+//             demand: true,
+//             alias: 'b'
+//         },
+//         limite: {
+//             alias: 'l',
+//             default: 10
+//         }
+//     }).command('crear', 'Genera un archivo con la tabla de multiplicar', {//esto especifica los argumentos que el argv puede recibir
+//         base: {
+//             demand: true,
+//             alias: 'b'
+//         },
+//         limite: {
+//             alias: 'l',
+//             default: 10
+//         }
+//     })
+//     .help()
+//     .argv;
 
 
 // let argv2 = process.argv;
@@ -58,6 +59,7 @@ const argv = require('yargs')
 /*capturamos comando específicios especificados en la líniea de comandos por ejemplo en node app-node crear --base 10
 * el comando es la palabra crear, dichos comandos siempre están en un array en la posición cero del argv que a su vez es
 * un array padre para el array de comandos*/
+let argv = require('./config/yargs').argv;
 
 let comando = argv._[0];
 
@@ -66,10 +68,9 @@ switch (comando) {
         // console.log('listar');
         console.log(listar(argv.base, argv.limite));
         break;
-
     case 'crear':
-        console.log(crearArchivo(argv.base, argv.limite).then(archivo => console.log(`Archivo talba-${argv.base}.txt creado`)).catch(err => console.log(err)));
-        // console.log(crearArchivo(argv.base).then(archivo => console.log(`Archivo talba-${argv.base}.txt creado`)).catch(err => console.log(err)));
+        console.log(crearArchivo(argv.base, argv.limite)
+            .then(archivo => console.log(`El archivo tabla-del-${argv.base}-al-${argv.limite} ha sido creado.`)).catch(err => console.log(err)));
         break;
     default:
         console.log('Comando no reconocido');
