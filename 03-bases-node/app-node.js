@@ -14,13 +14,63 @@
 
 // ahora importamos el archivo
 //forma normal
-const multiplicar = require('./multiplicar/multiplicar');
+// const multiplicar = require('./multiplicar/multiplicar');
 //forma destructurada
-const {crearArchivo} = require('./multiplicar/multiplicar');
+const {crearArchivo, listar} = require('./multiplicar/multiplicar');
 // base = 8;
 
 //recibimos el parámetro base desde la consola, en la terminal hay que poner node app-node.js --base12
-let argv = process.argv;
-let base = argv[2].split('=')[1];
 
-console.log(crearArchivo(base).then(archivo => console.log(`Archivo talba-${base}.txt creado`)).catch(err => console.log(err)));
+/* ahora capturamos el argv utilizando yargs para poder configurar de mejor manera lo que el argv retorna
+* además de */
+const argv = require('yargs')
+    .command('listar', 'Imprime la tabla multiplicar', {//esto especifica los argumentos que el argv puede recibir
+        base: {
+            demand: true,
+            alias: 'b'
+        },
+        limite: {
+            alias: 'l',
+            default: 10
+        }
+    }).command('crear', 'Genera un archivo con la tabla de multiplicar', {//esto especifica los argumentos que el argv puede recibir
+        base: {
+            demand: true,
+            alias: 'b'
+        },
+        limite: {
+            alias: 'l',
+            default: 10
+        }
+    })
+    .help()
+    .argv;
+
+
+// let argv2 = process.argv;
+// console.log(argv.base);
+// console.log('límite', argv.limite);
+// console.log(argv2);
+
+// let base = argv2[2].split('=')[1];
+// console.log(crearArchivo(base).then(archivo => console.log(`Archivo talba-${base}.txt creado`)).catch(err => console.log(err)));
+
+/*capturamos comando específicios especificados en la líniea de comandos por ejemplo en node app-node crear --base 10
+* el comando es la palabra crear, dichos comandos siempre están en un array en la posición cero del argv que a su vez es
+* un array padre para el array de comandos*/
+
+let comando = argv._[0];
+
+switch (comando) {
+    case 'listar':
+        // console.log('listar');
+        console.log(listar(argv.base, argv.limite));
+        break;
+
+    case 'crear':
+        console.log(crearArchivo(argv.base, argv.limite).then(archivo => console.log(`Archivo talba-${argv.base}.txt creado`)).catch(err => console.log(err)));
+        // console.log(crearArchivo(argv.base).then(archivo => console.log(`Archivo talba-${argv.base}.txt creado`)).catch(err => console.log(err)));
+        break;
+    default:
+        console.log('Comando no reconocido');
+}
